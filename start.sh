@@ -8,7 +8,7 @@ read -sp "Pass: " IMM_PASS
 
 SERVER=${SERVER:-192.168.1.137}
 SERVER_PROTO=${SERVER_PROTO:-http}
-IMM_USER=${name:-RandomBK}
+IMM_USER=${IMM_USER:-RandomBK}
 
 echo Logging in...
 login_response=$(curl "$SERVER_PROTO://$SERVER/session/create" -d "USERNAME=$IMM_USER,PASSWORD=$IMM_PASS" 2>/dev/null) 
